@@ -1,5 +1,5 @@
 #!/bin/bash
 
-/init
+/init &
 
 su - mfdata
