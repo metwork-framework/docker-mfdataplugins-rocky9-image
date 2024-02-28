@@ -30,9 +30,9 @@ RUN yum -y install metwork-mfdata-full
 RUN yum -y install initscripts vim coreutils-common cronie make
 
 COPY root /
-RUN chmod +x /root/entrypoint.sh
+RUN chmod +x /entrypoint.sh
 RUN /build/s6_overlay.sh && \
     yum clean all && \
     rm -Rf /build
 
-ENTRYPOINT ["/root/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
