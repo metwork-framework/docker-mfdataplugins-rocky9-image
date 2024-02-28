@@ -34,4 +34,4 @@ RUN /build/s6_overlay.sh && \
     yum clean all && \
     rm -Rf /build
 
-ENTRYPOINT ["/init && /usr/bin/su - mfdata"]
+ENTRYPOINT ["/bin/sh", "-c", "/init && /usr/bin/su - mfdata"]
